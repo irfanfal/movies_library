@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+  h1 author: #{author.name}
+    h4 Books
+
+    dl
+    each book in author_books
+      dt
+        a(href=book.url) #{book.title}
+      dd #{book.summary}
+
+    else
+      p This author has no books.
+
+
+  p
+    a(href=author.url+'/delete') Delete author
+  p
+    a(href=author.url+'/update') Update author

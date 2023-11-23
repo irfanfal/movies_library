@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Selamat Datang di Movie Library, simpan daftar film terbaikmu.
+
+  p The library has the following record counts:
+
+  ul
+    li #[strong Movies:] !{book_count}
+    li #[strong Directors:] !{author_count}
+    li #[strong Genres:] !{genre_count}
